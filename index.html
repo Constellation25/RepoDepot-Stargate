@@ -3,511 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>🌌 Constellation 25 — Master Inventory</title>
+<title>🌌 Constellation 25 — RepoDepot-Stargate</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:monospace;background:#0a0f1e;color:#e0e0ff;padding:20px}
-h1{color:#c9a84c;font-size:1.5em;margin-bottom:5px}
-.sub{color:#8892b0;font-size:.85em;margin-bottom:30px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;margin-bottom:30px}
-.card{background:#0d1530;border:1px solid rgba(74,158,255,.2);border-radius:10px;padding:20px;text-align:center}
-.card .num{font-size:2em;font-weight:700;color:#c9a84c}
-.card .label{color:#8892b0;font-size:.8em;margin-top:5px}
-.section{background:#0d1530;border:1px solid rgba(74,158,255,.15);border-radius:10px;padding:20px;margin-bottom:20px}
-.section h2{color:#4a9eff;font-size:1em;margin-bottom:15px;padding-bottom:8px;border-bottom:1px solid rgba(74,158,255,.15)}
-table{width:100%;border-collapse:collapse;font-size:.82em}
-th{color:#4a9eff;text-align:left;padding:8px;border-bottom:1px solid rgba(74,158,255,.15)}
-td{padding:8px;border-bottom:1px solid rgba(255,255,255,.05);color:#ccc}
-tr:hover td{background:rgba(74,158,255,.05)}
-a{color:#4a9eff;text-decoration:none}
-a:hover{color:#c9a84c}
-.badge{display:inline-block;padding:2px 8px;border-radius:8px;font-size:.75em;font-weight:600}
-.green{background:rgba(72,199,142,.1);color:#48c78e}
-.yellow{background:rgba(255,221,87,.1);color:#ffd857}
-.red{background:rgba(241,70,104,.1);color:#f14668}
-.agent-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}
-.agent{background:#0a0f1e;border:1px solid rgba(74,158,255,.15);border-radius:8px;padding:12px;display:flex;align-items:center;gap:10px}
-.agent-dot{width:8px;height:8px;background:#48c78e;border-radius:50%;flex-shrink:0}
-.agent-name{color:#c9a84c;font-weight:700;font-size:.9em}
-.agent-duty{color:#8892b0;font-size:.78em}
-.ts{color:#555;font-size:.75em}
+body{background:#0a0a1a;color:#e0e0ff;font-family:monospace;padding:20px}
+h1{color:#7af;text-align:center;padding:30px 0 10px;font-size:2em;letter-spacing:2px}
+.sub{text-align:center;color:#888;margin-bottom:30px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:30px}
+.stat{background:#111128;border:1px solid #333;border-radius:8px;padding:18px;text-align:center}
+.stat .n{font-size:2em;color:#7af;font-weight:bold}
+.stat .l{color:#888;font-size:.8em;margin-top:4px}
+.tabs{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+.tab{padding:8px 20px;background:#1a1a2e;border:1px solid #333;border-radius:5px;cursor:pointer;color:#888}
+.tab.active{background:#7af;color:#000;font-weight:bold}
+.tc{display:none}
+.tc.active{display:block}
+.search{width:100%;padding:10px;background:#1a1a2e;border:1px solid #444;color:#fff;border-radius:5px;margin:10px 0;font-size:1em}
+table{width:100%;border-collapse:collapse}
+th{background:#1a1a2e;color:#7af;padding:10px;text-align:left;border-bottom:1px solid #333}
+td{padding:8px 10px;border-bottom:1px solid #111128;font-size:.85em}
+tr:hover{background:#111128}
+a{color:#7af;text-decoration:none}
+a:hover{text-decoration:underline}
+footer{text-align:center;color:#333;margin-top:40px;font-size:.8em;padding:20px}
 </style>
 </head>
 <body>
-<h1>🌌 CONSTELLATION 25 — MASTER INVENTORY</h1>
-<div class="sub">MrGGTP · FacePrintPay · Cygel White · Generated: 2026-02-25 23:27:13</div>
+<h1>🌌 CONSTELLATION 25</h1>
+<p class="sub">RepoDepot-Stargate — Master Deployment Index</p>
+<p class="sub" style="color:#4f4">FacePrintPay / Cygel White — Thu Apr  9 13:48:04 EDT 2026</p>
 
-<div class="grid">
-  <div class="card"><div class="num">95841</div><div class="label">Total Files</div></div>
-  <div class="card"><div class="num">299</div><div class="label">Git Repos (local)</div></div>
-  <div class="card"><div class="num">30</div><div class="label">Complete Builds</div></div>
-  <div class="card"><div class="num">552</div><div class="label">Verified Scripts</div></div>
-  <div class="card"><div class="num">1105</div><div class="label">HTML Files</div></div>
-  <div class="card"><div class="num">952</div><div class="label">Shell Scripts</div></div>
-  <div class="card"><div class="num">3598</div><div class="label">Python Files</div></div>
-  <div class="card"><div class="num">6534</div><div class="label">JavaScript Files</div></div>
-  <div class="card"><div class="num">6522</div><div class="label">JSON Files</div></div>
-  <div class="card"><div class="num">5506</div><div class="label">Markdown Files</div></div>
+<div class="stats">
+  <div class="stat"><div class="n">318,620</div><div class="l">Total Files</div></div>
+  <div class="stat"><div class="n">91,120</div><div class="l">Code Files</div></div>
+  <div class="stat"><div class="n">0</div><div class="l">Builds Live</div></div>
+  <div class="stat"><div class="n">0</div><div class="l">Scripts Live</div></div>
+  <div class="stat"><div class="n">1,816</div><div class="l">In Progress</div></div>
+  <div class="stat"><div class="n">103</div><div class="l">Repos Mirrored</div></div>
 </div>
 
-<div class="section">
-  <h2>🪐 17 PLANETARY AGENTS — STATUS</h2>
-  <div class="agent-grid">
-    <div class="agent"><div class="agent-dot"></div><div><div class="agent-name">1 🌍 Earth</div><div class="agent-duty">Scaffold · init · new projects</div></div></div>
-    <div class="agent"><div class="agent-dot"></div><div><div class="agent-name">2 🌙 Moon</div><div class="agent-duty">Fix bugs · syntax · debug</div></div></div>
-    <div class="agent"><div class="agent-dot"></div><div><div class="agent-name">3 ☀️ Sun</div><div class="agent-duty">Optimize · speed · performance</div></div></div>
-    <div class="agent"><div class="agent-dot"></div><div><div class="agent-name">4 ☿ Mercury</div><div class="agent-duty">Unit tests · coverage · jest</div></div></div>
-    <div class="agent"><div class="agent-dot"></div><div><div class="agent-name">5 ♀ Venus</div><div class="agent-duty">Regression · e2e · integration</div></div></div>
-    <div class="agent"><div class="agent-dot"></div><div><div class="agent-name">6 ♂ Mars</div><div class="agent-duty">Security · auth · vulnerabilities</div></div></div>
-    <div class="agent"><div class="agent-dot"></div><div><div class="agent-name">7 ♃ Jupiter</div><div class="agent-duty">Docs · README · analysis</div></div></div>
-    <div class="agent"><div class="agent-dot"></div><div><div class="agent-name">8 ♄ Saturn</div><div class="agent-duty">Refactor · modernize · clean</div></div></div>
-    <div class="agent"><div class="agent-dot"></div><div><div class="agent-name">9 ♅ Uranus</div><div class="agent-duty">NLP · summarize · parse</div></div></div>
-    <div class="agent"><div class="agent-dot"></div><div><div class="agent-name">10 ♆ Neptune</div><div class="agent-duty">Dedup · merge · consolidate</div></div></div>
-    <div class="agent"><div class="agent-dot"></div><div><div class="agent-name">11 🦢 Cygnus</div><div class="agent-duty">AI · ML · models · LLM</div></div></div>
-    <div class="agent"><div class="agent-dot"></div><div><div class="agent-name">12 🏹 Orion</div><div class="agent-duty">UI · UX · frontend · CSS</div></div></div>
-    <div class="agent"><div class="agent-dot"></div><div><div class="agent-name">13 🌌 Andromeda</div><div class="agent-duty">API · webhooks · integrations</div></div></div>
-    <div class="agent"><div class="agent-dot"></div><div><div class="agent-name">14 ✨ Pleiades</div><div class="agent-duty">Env · dependencies · packages</div></div></div>
-    <div class="agent"><div class="agent-dot"></div><div><div class="agent-name">15 ⭐ Sirius</div><div class="agent-duty">Deploy · push · Vercel · Docker</div></div></div>
-    <div class="agent"><div class="agent-dot"></div><div><div class="agent-name">16 🐕 CanisMajor</div><div class="agent-duty">Tech debt · TODO · legacy</div></div></div>
-    <div class="agent"><div class="agent-dot"></div><div><div class="agent-name">17 🐉 Hydra</div><div class="agent-duty">CI/CD · pipelines · Actions</div></div></div>
-  </div>
+<div class="tabs">
+  <div class="tab active" onclick="show('complete',this)">✅ Complete Builds (0)</div>
+  <div class="tab" onclick="show('scripts',this)">🚀 Live Scripts (0)</div>
 </div>
 
-<div class="section">
-  <h2>📦 COMPLETE BUILDS</h2>
-<table>
-<tr><th>Build Name</th><th>Score</th><th>SHA256</th><th>Path</th></tr>
-<tr><td><strong>AiKre8tive-Stargate</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>b072a8e0ab35d917</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate</span></td></tr><tr><td><strong>ai-kre8tive-sovereign-genesis</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>ad78ff389e511cf4</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/backup_20260122_2326/sovereign/ai-kre8tive-sovereign-genesis</span></td></tr><tr><td><strong>sovereign-ad-serve</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>d38a1d5321786512</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/repos/sovereign-ad-serve</span></td></tr><tr><td><strong>AiKre8tive_Sovereign_Genesis</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>da58a04601464318</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/AiKre8tive_Sovereign_Genesis</span></td></tr><tr><td><strong>codespaces-react</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>52b1a80bf9a30e9a</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/codespaces-react</span></td></tr><tr><td><strong>stargate-grpc-node-client</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>2349cfb4a105f2b5</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/stargate-grpc-node-client</span></td></tr><tr><td><strong>aikre8tive</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>dfce7d0f2ef1312a</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/c25-final-13952/aikre8tive</span></td></tr><tr><td><strong>AiKre8tive-Stargate</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>6525ccbd855971cc</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/constellation25-mono/sovereign-gtp/src/AiKre8tive-Stargate</span></td></tr><tr><td><strong>AiKre8tive-Stargate</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>8b1faa0676bb813d</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/constellation25-mono/AiKre8tive-Stargate</span></td></tr><tr><td><strong>nextjs-boilerplate</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>fad13b317d6372d0</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/nextjs-boilerplate</span></td></tr><tr><td><strong>https-github.com-FacePrintPay-PoRTaLed-</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>560d38db065cc426</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/https-github.com-FacePrintPay-PoRTaLed-</span></td></tr><tr><td><strong>npm-documentation</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>53786432fc3641ae</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/npm-documentation</span></td></tr><tr><td><strong>AiKre8tive_Sovereign_Genesis</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>bcfc9db1f3827721</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/consolidation-audit/AiKre8tive_Sovereign_Genesis</span></td></tr><tr><td><strong>master</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>f3dd066ec4e9810a</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/consolidation-audit/master</span></td></tr><tr><td><strong>vscode-project-manager</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>4aca1eed006bd5af</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/vscode-project-manager</span></td></tr><tr><td><strong>AiKre8tive-Stargate</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>b072a8e0ab35d917</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate</span></td></tr><tr><td><strong>ai-kre8tive-sovereign-genesis</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>ad78ff389e511cf4</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/backup_20260122_2326/sovereign/ai-kre8tive-sovereign-genesis</span></td></tr><tr><td><strong>sovereign-ad-serve</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>d38a1d5321786512</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/repos/sovereign-ad-serve</span></td></tr><tr><td><strong>AiKre8tive_Sovereign_Genesis</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>da58a04601464318</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/AiKre8tive_Sovereign_Genesis</span></td></tr><tr><td><strong>codespaces-react</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>52b1a80bf9a30e9a</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/codespaces-react</span></td></tr><tr><td><strong>stargate-grpc-node-client</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>2349cfb4a105f2b5</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/stargate-grpc-node-client</span></td></tr><tr><td><strong>aikre8tive</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>dfce7d0f2ef1312a</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/c25-final-13952/aikre8tive</span></td></tr><tr><td><strong>AiKre8tive-Stargate</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>6525ccbd855971cc</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/constellation25-mono/sovereign-gtp/src/AiKre8tive-Stargate</span></td></tr><tr><td><strong>AiKre8tive-Stargate</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>8b1faa0676bb813d</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/constellation25-mono/AiKre8tive-Stargate</span></td></tr><tr><td><strong>nextjs-boilerplate</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>fad13b317d6372d0</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/nextjs-boilerplate</span></td></tr><tr><td><strong>https-github.com-FacePrintPay-PoRTaLed-</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>560d38db065cc426</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/https-github.com-FacePrintPay-PoRTaLed-</span></td></tr><tr><td><strong>npm-documentation</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>53786432fc3641ae</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/npm-documentation</span></td></tr><tr><td><strong>AiKre8tive_Sovereign_Genesis</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>bcfc9db1f3827721</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/consolidation-audit/AiKre8tive_Sovereign_Genesis</span></td></tr><tr><td><strong>master</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>f3dd066ec4e9810a</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/consolidation-audit/master</span></td></tr><tr><td><strong>vscode-project-manager</strong></td><td><span class='badge green'>|</span></td><td style='font-family:monospace;font-size:.75em;color:#4a9eff'>4aca1eed006bd5af</td><td><span style='color:#555;font-size:.78em'>/data/data/com.termux/files/home/vscode-project-manager</span></td></tr>
-</table>
+<div id="complete" class="tc active">
+  <input class="search" type="text" placeholder="Search builds..." onkeyup="filter('ct',this.value)">
+  <table><thead><tr><th>Repository</th><th>Status</th><th>Live</th></tr></thead>
+  <tbody id="ct"></tbody></table>
 </div>
 
-<div class="section">
-  <h2>🚀 GITHUB REPOS — FacePrintPay</h2>
-  <table>
-    <tr><th>Repository</th><th>URL</th><th>Updated</th></tr>
-<tr><td><strong>videocourts</strong></td><td><a href='https://github.com/FacePrintPay/videocourts' target='_blank'>https://github.com/FacePrintPay/videocourts</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>RepoDepot-Stargate</strong></td><td><a href='https://github.com/FacePrintPay/RepoDepot-Stargate' target='_blank'>https://github.com/FacePrintPay/RepoDepot-Stargate</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-constellation25-swarm</strong></td><td><a href='https://github.com/FacePrintPay/c25-constellation25-swarm' target='_blank'>https://github.com/FacePrintPay/c25-constellation25-swarm</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-constellation</strong></td><td><a href='https://github.com/FacePrintPay/c25-constellation' target='_blank'>https://github.com/FacePrintPay/c25-constellation</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-buzzblast</strong></td><td><a href='https://github.com/FacePrintPay/c25-buzzblast' target='_blank'>https://github.com/FacePrintPay/c25-buzzblast</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-key-rotate</strong></td><td><a href='https://github.com/FacePrintPay/c25-key-rotate' target='_blank'>https://github.com/FacePrintPay/c25-key-rotate</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-sovereign-launch</strong></td><td><a href='https://github.com/FacePrintPay/c25-sovereign-launch' target='_blank'>https://github.com/FacePrintPay/c25-sovereign-launch</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-secure-github-auth</strong></td><td><a href='https://github.com/FacePrintPay/c25-secure-github-auth' target='_blank'>https://github.com/FacePrintPay/c25-secure-github-auth</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-vercel-secrets-sync</strong></td><td><a href='https://github.com/FacePrintPay/c25-vercel-secrets-sync' target='_blank'>https://github.com/FacePrintPay/c25-vercel-secrets-sync</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-test-agents</strong></td><td><a href='https://github.com/FacePrintPay/c25-test-agents' target='_blank'>https://github.com/FacePrintPay/c25-test-agents</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-run-all-apps</strong></td><td><a href='https://github.com/FacePrintPay/c25-run-all-apps' target='_blank'>https://github.com/FacePrintPay/c25-run-all-apps</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-launch-agents</strong></td><td><a href='https://github.com/FacePrintPay/c25-launch-agents' target='_blank'>https://github.com/FacePrintPay/c25-launch-agents</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-1basher</strong></td><td><a href='https://github.com/FacePrintPay/c25-1basher' target='_blank'>https://github.com/FacePrintPay/c25-1basher</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-planetary-crawl-inject-loop</strong></td><td><a href='https://github.com/FacePrintPay/c25-planetary-crawl-inject-loop' target='_blank'>https://github.com/FacePrintPay/c25-planetary-crawl-inject-loop</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-fp-consolidate</strong></td><td><a href='https://github.com/FacePrintPay/c25-fp-consolidate' target='_blank'>https://github.com/FacePrintPay/c25-fp-consolidate</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-throne</strong></td><td><a href='https://github.com/FacePrintPay/c25-throne' target='_blank'>https://github.com/FacePrintPay/c25-throne</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-run-all-tasks</strong></td><td><a href='https://github.com/FacePrintPay/c25-run-all-tasks' target='_blank'>https://github.com/FacePrintPay/c25-run-all-tasks</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-backfill-artifacts-from-done</strong></td><td><a href='https://github.com/FacePrintPay/c25-backfill-artifacts-from-done' target='_blank'>https://github.com/FacePrintPay/c25-backfill-artifacts-from-done</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-yesquid-task-worker</strong></td><td><a href='https://github.com/FacePrintPay/c25-yesquid-task-worker' target='_blank'>https://github.com/FacePrintPay/c25-yesquid-task-worker</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-run</strong></td><td><a href='https://github.com/FacePrintPay/c25-run' target='_blank'>https://github.com/FacePrintPay/c25-run</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-sovereign-push-everywhere</strong></td><td><a href='https://github.com/FacePrintPay/c25-sovereign-push-everywhere' target='_blank'>https://github.com/FacePrintPay/c25-sovereign-push-everywhere</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-reactivate-planetary-agents</strong></td><td><a href='https://github.com/FacePrintPay/c25-reactivate-planetary-agents' target='_blank'>https://github.com/FacePrintPay/c25-reactivate-planetary-agents</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-tailwind-view</strong></td><td><a href='https://github.com/FacePrintPay/c25-tailwind-view' target='_blank'>https://github.com/FacePrintPay/c25-tailwind-view</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-setup-vscode</strong></td><td><a href='https://github.com/FacePrintPay/c25-setup-vscode' target='_blank'>https://github.com/FacePrintPay/c25-setup-vscode</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-setup-pingpang-demo</strong></td><td><a href='https://github.com/FacePrintPay/c25-setup-pingpang-demo' target='_blank'>https://github.com/FacePrintPay/c25-setup-pingpang-demo</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-install-qrencode</strong></td><td><a href='https://github.com/FacePrintPay/c25-install-qrencode' target='_blank'>https://github.com/FacePrintPay/c25-install-qrencode</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-generate-qr-affiliate</strong></td><td><a href='https://github.com/FacePrintPay/c25-generate-qr-affiliate' target='_blank'>https://github.com/FacePrintPay/c25-generate-qr-affiliate</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-rebuild-percellify</strong></td><td><a href='https://github.com/FacePrintPay/c25-rebuild-percellify' target='_blank'>https://github.com/FacePrintPay/c25-rebuild-percellify</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-deploy-agents</strong></td><td><a href='https://github.com/FacePrintPay/c25-deploy-agents' target='_blank'>https://github.com/FacePrintPay/c25-deploy-agents</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-deploy-log-dialog</strong></td><td><a href='https://github.com/FacePrintPay/c25-deploy-log-dialog' target='_blank'>https://github.com/FacePrintPay/c25-deploy-log-dialog</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-deploy-linked2</strong></td><td><a href='https://github.com/FacePrintPay/c25-deploy-linked2' target='_blank'>https://github.com/FacePrintPay/c25-deploy-linked2</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-arcai-deploy</strong></td><td><a href='https://github.com/FacePrintPay/c25-arcai-deploy' target='_blank'>https://github.com/FacePrintPay/c25-arcai-deploy</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-test-project</strong></td><td><a href='https://github.com/FacePrintPay/c25-test-project' target='_blank'>https://github.com/FacePrintPay/c25-test-project</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-build-fixer-agent</strong></td><td><a href='https://github.com/FacePrintPay/c25-build-fixer-agent' target='_blank'>https://github.com/FacePrintPay/c25-build-fixer-agent</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-whisper-auto-loop</strong></td><td><a href='https://github.com/FacePrintPay/c25-whisper-auto-loop' target='_blank'>https://github.com/FacePrintPay/c25-whisper-auto-loop</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-send-echo-trace</strong></td><td><a href='https://github.com/FacePrintPay/c25-send-echo-trace' target='_blank'>https://github.com/FacePrintPay/c25-send-echo-trace</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-whisper-holiday-bash</strong></td><td><a href='https://github.com/FacePrintPay/c25-whisper-holiday-bash' target='_blank'>https://github.com/FacePrintPay/c25-whisper-holiday-bash</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-launch-presskit</strong></td><td><a href='https://github.com/FacePrintPay/c25-launch-presskit' target='_blank'>https://github.com/FacePrintPay/c25-launch-presskit</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-inject-versedna</strong></td><td><a href='https://github.com/FacePrintPay/c25-inject-versedna' target='_blank'>https://github.com/FacePrintPay/c25-inject-versedna</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-git-autocommit</strong></td><td><a href='https://github.com/FacePrintPay/c25-git-autocommit' target='_blank'>https://github.com/FacePrintPay/c25-git-autocommit</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-final-sync</strong></td><td><a href='https://github.com/FacePrintPay/c25-final-sync' target='_blank'>https://github.com/FacePrintPay/c25-final-sync</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-broadcast-whisper-echo</strong></td><td><a href='https://github.com/FacePrintPay/c25-broadcast-whisper-echo' target='_blank'>https://github.com/FacePrintPay/c25-broadcast-whisper-echo</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-ping-agents</strong></td><td><a href='https://github.com/FacePrintPay/c25-ping-agents' target='_blank'>https://github.com/FacePrintPay/c25-ping-agents</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-deploy-universe</strong></td><td><a href='https://github.com/FacePrintPay/c25-deploy-universe' target='_blank'>https://github.com/FacePrintPay/c25-deploy-universe</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-arcai-original</strong></td><td><a href='https://github.com/FacePrintPay/c25-arcai-original' target='_blank'>https://github.com/FacePrintPay/c25-arcai-original</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-dashboard</strong></td><td><a href='https://github.com/FacePrintPay/c25-dashboard' target='_blank'>https://github.com/FacePrintPay/c25-dashboard</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-install</strong></td><td><a href='https://github.com/FacePrintPay/c25-install' target='_blank'>https://github.com/FacePrintPay/c25-install</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-deploy</strong></td><td><a href='https://github.com/FacePrintPay/c25-deploy' target='_blank'>https://github.com/FacePrintPay/c25-deploy</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-consolidate-obsidian</strong></td><td><a href='https://github.com/FacePrintPay/c25-consolidate-obsidian' target='_blank'>https://github.com/FacePrintPay/c25-consolidate-obsidian</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-launch</strong></td><td><a href='https://github.com/FacePrintPay/c25-launch' target='_blank'>https://github.com/FacePrintPay/c25-launch</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-setup-shizuku</strong></td><td><a href='https://github.com/FacePrintPay/c25-setup-shizuku' target='_blank'>https://github.com/FacePrintPay/c25-setup-shizuku</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-agent-starter</strong></td><td><a href='https://github.com/FacePrintPay/c25-agent-starter' target='_blank'>https://github.com/FacePrintPay/c25-agent-starter</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-direct-agent-activation</strong></td><td><a href='https://github.com/FacePrintPay/c25-direct-agent-activation' target='_blank'>https://github.com/FacePrintPay/c25-direct-agent-activation</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-meaningful-inventory</strong></td><td><a href='https://github.com/FacePrintPay/c25-meaningful-inventory' target='_blank'>https://github.com/FacePrintPay/c25-meaningful-inventory</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-forensic-scan-365d</strong></td><td><a href='https://github.com/FacePrintPay/c25-forensic-scan-365d' target='_blank'>https://github.com/FacePrintPay/c25-forensic-scan-365d</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-build-precedence-dossier</strong></td><td><a href='https://github.com/FacePrintPay/c25-build-precedence-dossier' target='_blank'>https://github.com/FacePrintPay/c25-build-precedence-dossier</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-build-memoria</strong></td><td><a href='https://github.com/FacePrintPay/c25-build-memoria' target='_blank'>https://github.com/FacePrintPay/c25-build-memoria</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-c25-mirror-push</strong></td><td><a href='https://github.com/FacePrintPay/c25-c25-mirror-push' target='_blank'>https://github.com/FacePrintPay/c25-c25-mirror-push</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-agents</strong></td><td><a href='https://github.com/FacePrintPay/c25-agents' target='_blank'>https://github.com/FacePrintPay/c25-agents</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-blackbox-github-update</strong></td><td><a href='https://github.com/FacePrintPay/c25-blackbox-github-update' target='_blank'>https://github.com/FacePrintPay/c25-blackbox-github-update</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-fp-code-audit</strong></td><td><a href='https://github.com/FacePrintPay/c25-fp-code-audit' target='_blank'>https://github.com/FacePrintPay/c25-fp-code-audit</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-meaningful-inventory-fixed</strong></td><td><a href='https://github.com/FacePrintPay/c25-meaningful-inventory-fixed' target='_blank'>https://github.com/FacePrintPay/c25-meaningful-inventory-fixed</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-constellation25</strong></td><td><a href='https://github.com/FacePrintPay/c25-constellation25' target='_blank'>https://github.com/FacePrintPay/c25-constellation25</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-fix-everything</strong></td><td><a href='https://github.com/FacePrintPay/c25-fix-everything' target='_blank'>https://github.com/FacePrintPay/c25-fix-everything</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-arcai-copy-4</strong></td><td><a href='https://github.com/FacePrintPay/c25-arcai-copy-4' target='_blank'>https://github.com/FacePrintPay/c25-arcai-copy-4</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-arcai-copy-3</strong></td><td><a href='https://github.com/FacePrintPay/c25-arcai-copy-3' target='_blank'>https://github.com/FacePrintPay/c25-arcai-copy-3</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-arcai-copy-2</strong></td><td><a href='https://github.com/FacePrintPay/c25-arcai-copy-2' target='_blank'>https://github.com/FacePrintPay/c25-arcai-copy-2</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-arcai-copy-1</strong></td><td><a href='https://github.com/FacePrintPay/c25-arcai-copy-1' target='_blank'>https://github.com/FacePrintPay/c25-arcai-copy-1</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-arcai-original-oldest</strong></td><td><a href='https://github.com/FacePrintPay/c25-arcai-original-oldest' target='_blank'>https://github.com/FacePrintPay/c25-arcai-original-oldest</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-fp-clean-forks</strong></td><td><a href='https://github.com/FacePrintPay/c25-fp-clean-forks' target='_blank'>https://github.com/FacePrintPay/c25-fp-clean-forks</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-constellation-25</strong></td><td><a href='https://github.com/FacePrintPay/c25-constellation-25' target='_blank'>https://github.com/FacePrintPay/c25-constellation-25</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-deploy-to-github</strong></td><td><a href='https://github.com/FacePrintPay/c25-deploy-to-github' target='_blank'>https://github.com/FacePrintPay/c25-deploy-to-github</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-find-videocourts</strong></td><td><a href='https://github.com/FacePrintPay/c25-find-videocourts' target='_blank'>https://github.com/FacePrintPay/c25-find-videocourts</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-cleanup-failed</strong></td><td><a href='https://github.com/FacePrintPay/c25-cleanup-failed' target='_blank'>https://github.com/FacePrintPay/c25-cleanup-failed</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-check-status</strong></td><td><a href='https://github.com/FacePrintPay/c25-check-status' target='_blank'>https://github.com/FacePrintPay/c25-check-status</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-link-github</strong></td><td><a href='https://github.com/FacePrintPay/c25-link-github' target='_blank'>https://github.com/FacePrintPay/c25-link-github</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-deploy-all</strong></td><td><a href='https://github.com/FacePrintPay/c25-deploy-all' target='_blank'>https://github.com/FacePrintPay/c25-deploy-all</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-kre8tive-portfolio-build</strong></td><td><a href='https://github.com/FacePrintPay/c25-kre8tive-portfolio-build' target='_blank'>https://github.com/FacePrintPay/c25-kre8tive-portfolio-build</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-do</strong></td><td><a href='https://github.com/FacePrintPay/c25-do' target='_blank'>https://github.com/FacePrintPay/c25-do</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-build-bash</strong></td><td><a href='https://github.com/FacePrintPay/c25-build-bash' target='_blank'>https://github.com/FacePrintPay/c25-build-bash</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-build</strong></td><td><a href='https://github.com/FacePrintPay/c25-build' target='_blank'>https://github.com/FacePrintPay/c25-build</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-check-todo</strong></td><td><a href='https://github.com/FacePrintPay/c25-check-todo' target='_blank'>https://github.com/FacePrintPay/c25-check-todo</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-bioauth</strong></td><td><a href='https://github.com/FacePrintPay/c25-bioauth' target='_blank'>https://github.com/FacePrintPay/c25-bioauth</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-c25-ranger</strong></td><td><a href='https://github.com/FacePrintPay/c25-c25-ranger' target='_blank'>https://github.com/FacePrintPay/c25-c25-ranger</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-archive-agentik</strong></td><td><a href='https://github.com/FacePrintPay/c25-archive-agentik' target='_blank'>https://github.com/FacePrintPay/c25-archive-agentik</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-recloak</strong></td><td><a href='https://github.com/FacePrintPay/c25-recloak' target='_blank'>https://github.com/FacePrintPay/c25-recloak</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-pypi</strong></td><td><a href='https://github.com/FacePrintPay/c25-pypi' target='_blank'>https://github.com/FacePrintPay/c25-pypi</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-totalrecall-audit</strong></td><td><a href='https://github.com/FacePrintPay/c25-totalrecall-audit' target='_blank'>https://github.com/FacePrintPay/c25-totalrecall-audit</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-setup-ssh</strong></td><td><a href='https://github.com/FacePrintPay/c25-setup-ssh' target='_blank'>https://github.com/FacePrintPay/c25-setup-ssh</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-quick-deploy</strong></td><td><a href='https://github.com/FacePrintPay/c25-quick-deploy' target='_blank'>https://github.com/FacePrintPay/c25-quick-deploy</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-run-stack</strong></td><td><a href='https://github.com/FacePrintPay/c25-run-stack' target='_blank'>https://github.com/FacePrintPay/c25-run-stack</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-run-monorepo</strong></td><td><a href='https://github.com/FacePrintPay/c25-run-monorepo' target='_blank'>https://github.com/FacePrintPay/c25-run-monorepo</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-find-and-run-everything</strong></td><td><a href='https://github.com/FacePrintPay/c25-find-and-run-everything' target='_blank'>https://github.com/FacePrintPay/c25-find-and-run-everything</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-create-home-symlinks</strong></td><td><a href='https://github.com/FacePrintPay/c25-create-home-symlinks' target='_blank'>https://github.com/FacePrintPay/c25-create-home-symlinks</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-run-all-home</strong></td><td><a href='https://github.com/FacePrintPay/c25-run-all-home' target='_blank'>https://github.com/FacePrintPay/c25-run-all-home</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-sync-to-obsidian</strong></td><td><a href='https://github.com/FacePrintPay/c25-sync-to-obsidian' target='_blank'>https://github.com/FacePrintPay/c25-sync-to-obsidian</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>aikre8tive-sovereign-genesis</strong></td><td><a href='https://github.com/FacePrintPay/aikre8tive-sovereign-genesis' target='_blank'>https://github.com/FacePrintPay/aikre8tive-sovereign-genesis</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-setup</strong></td><td><a href='https://github.com/FacePrintPay/c25-setup' target='_blank'>https://github.com/FacePrintPay/c25-setup</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-sovereign-deployer</strong></td><td><a href='https://github.com/FacePrintPay/c25-sovereign-deployer' target='_blank'>https://github.com/FacePrintPay/c25-sovereign-deployer</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-setup-termux-obsidian-sync</strong></td><td><a href='https://github.com/FacePrintPay/c25-setup-termux-obsidian-sync' target='_blank'>https://github.com/FacePrintPay/c25-setup-termux-obsidian-sync</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-setup-single-repo</strong></td><td><a href='https://github.com/FacePrintPay/c25-setup-single-repo' target='_blank'>https://github.com/FacePrintPay/c25-setup-single-repo</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-setup-multi-repo</strong></td><td><a href='https://github.com/FacePrintPay/c25-setup-multi-repo' target='_blank'>https://github.com/FacePrintPay/c25-setup-multi-repo</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-mars-sharecrop</strong></td><td><a href='https://github.com/FacePrintPay/c25-mars-sharecrop' target='_blank'>https://github.com/FacePrintPay/c25-mars-sharecrop</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-start-stack</strong></td><td><a href='https://github.com/FacePrintPay/c25-start-stack' target='_blank'>https://github.com/FacePrintPay/c25-start-stack</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-integrity-run</strong></td><td><a href='https://github.com/FacePrintPay/c25-integrity-run' target='_blank'>https://github.com/FacePrintPay/c25-integrity-run</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-package-portfolio</strong></td><td><a href='https://github.com/FacePrintPay/c25-package-portfolio' target='_blank'>https://github.com/FacePrintPay/c25-package-portfolio</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-bio-push</strong></td><td><a href='https://github.com/FacePrintPay/c25-bio-push' target='_blank'>https://github.com/FacePrintPay/c25-bio-push</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-deploy-sovereign</strong></td><td><a href='https://github.com/FacePrintPay/c25-deploy-sovereign' target='_blank'>https://github.com/FacePrintPay/c25-deploy-sovereign</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-launch-tunnel</strong></td><td><a href='https://github.com/FacePrintPay/c25-launch-tunnel' target='_blank'>https://github.com/FacePrintPay/c25-launch-tunnel</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-parasol-termux</strong></td><td><a href='https://github.com/FacePrintPay/c25-parasol-termux' target='_blank'>https://github.com/FacePrintPay/c25-parasol-termux</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-sync-obsidian-cloud</strong></td><td><a href='https://github.com/FacePrintPay/c25-sync-obsidian-cloud' target='_blank'>https://github.com/FacePrintPay/c25-sync-obsidian-cloud</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-build-broccoli</strong></td><td><a href='https://github.com/FacePrintPay/c25-build-broccoli' target='_blank'>https://github.com/FacePrintPay/c25-build-broccoli</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>AiKre8tive-Stargate</strong></td><td><a href='https://github.com/FacePrintPay/AiKre8tive-Stargate' target='_blank'>https://github.com/FacePrintPay/AiKre8tive-Stargate</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-sovereigngtp</strong></td><td><a href='https://github.com/FacePrintPay/c25-sovereigngtp' target='_blank'>https://github.com/FacePrintPay/c25-sovereigngtp</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-sovereign-unified-launch</strong></td><td><a href='https://github.com/FacePrintPay/c25-sovereign-unified-launch' target='_blank'>https://github.com/FacePrintPay/c25-sovereign-unified-launch</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>c25-sovereign-auto-start</strong></td><td><a href='https://github.com/FacePrintPay/c25-sovereign-auto-start' target='_blank'>https://github.com/FacePrintPay/c25-sovereign-auto-start</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>vscode-project-manager</strong></td><td><a href='https://github.com/FacePrintPay/vscode-project-manager' target='_blank'>https://github.com/FacePrintPay/vscode-project-manager</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>home</strong></td><td><a href='https://github.com/FacePrintPay/home' target='_blank'>https://github.com/FacePrintPay/home</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>master</strong></td><td><a href='https://github.com/FacePrintPay/master' target='_blank'>https://github.com/FacePrintPay/master</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>npm-documentation</strong></td><td><a href='https://github.com/FacePrintPay/npm-documentation' target='_blank'>https://github.com/FacePrintPay/npm-documentation</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>https-github-com-faceprintpay-portaled-</strong></td><td><a href='https://github.com/FacePrintPay/https-github-com-faceprintpay-portaled-' target='_blank'>https://github.com/FacePrintPay/https-github-com-faceprintpay-portaled-</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>nextjs-boilerplate</strong></td><td><a href='https://github.com/FacePrintPay/nextjs-boilerplate' target='_blank'>https://github.com/FacePrintPay/nextjs-boilerplate</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>stargate-grpc-node-client</strong></td><td><a href='https://github.com/FacePrintPay/stargate-grpc-node-client' target='_blank'>https://github.com/FacePrintPay/stargate-grpc-node-client</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>aikre8tive</strong></td><td><a href='https://github.com/FacePrintPay/aikre8tive' target='_blank'>https://github.com/FacePrintPay/aikre8tive</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>codespaces-react</strong></td><td><a href='https://github.com/FacePrintPay/codespaces-react' target='_blank'>https://github.com/FacePrintPay/codespaces-react</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>sovereign-ad-serve</strong></td><td><a href='https://github.com/FacePrintPay/sovereign-ad-serve' target='_blank'>https://github.com/FacePrintPay/sovereign-ad-serve</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>ai-kre8tive-sovereign-genesis</strong></td><td><a href='https://github.com/FacePrintPay/ai-kre8tive-sovereign-genesis' target='_blank'>https://github.com/FacePrintPay/ai-kre8tive-sovereign-genesis</a></td><td class='ts'>2026-02-26</td></tr>
-<tr><td><strong>THAT</strong></td><td><a href='https://github.com/FacePrintPay/THAT' target='_blank'>https://github.com/FacePrintPay/THAT</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>VeRseD_Ai</strong></td><td><a href='https://github.com/FacePrintPay/VeRseD_Ai' target='_blank'>https://github.com/FacePrintPay/VeRseD_Ai</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>stargate-grpc-nosqlbench</strong></td><td><a href='https://github.com/FacePrintPay/stargate-grpc-nosqlbench' target='_blank'>https://github.com/FacePrintPay/stargate-grpc-nosqlbench</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>stargate-grpc-go-client</strong></td><td><a href='https://github.com/FacePrintPay/stargate-grpc-go-client' target='_blank'>https://github.com/FacePrintPay/stargate-grpc-go-client</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>stargate</strong></td><td><a href='https://github.com/FacePrintPay/stargate' target='_blank'>https://github.com/FacePrintPay/stargate</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>PoRTaLed-</strong></td><td><a href='https://github.com/FacePrintPay/PoRTaLed-' target='_blank'>https://github.com/FacePrintPay/PoRTaLed-</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>PaThosAi</strong></td><td><a href='https://github.com/FacePrintPay/PaThosAi' target='_blank'>https://github.com/FacePrintPay/PaThosAi</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>Orange</strong></td><td><a href='https://github.com/FacePrintPay/Orange' target='_blank'>https://github.com/FacePrintPay/Orange</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>MatrixOS</strong></td><td><a href='https://github.com/FacePrintPay/MatrixOS' target='_blank'>https://github.com/FacePrintPay/MatrixOS</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>linker</strong></td><td><a href='https://github.com/FacePrintPay/linker' target='_blank'>https://github.com/FacePrintPay/linker</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>kreativekoncepts</strong></td><td><a href='https://github.com/FacePrintPay/kreativekoncepts' target='_blank'>https://github.com/FacePrintPay/kreativekoncepts</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>flutter</strong></td><td><a href='https://github.com/FacePrintPay/flutter' target='_blank'>https://github.com/FacePrintPay/flutter</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>dynamoDB-adapter</strong></td><td><a href='https://github.com/FacePrintPay/dynamoDB-adapter' target='_blank'>https://github.com/FacePrintPay/dynamoDB-adapter</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>docs-content</strong></td><td><a href='https://github.com/FacePrintPay/docs-content' target='_blank'>https://github.com/FacePrintPay/docs-content</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>data-api</strong></td><td><a href='https://github.com/FacePrintPay/data-api' target='_blank'>https://github.com/FacePrintPay/data-api</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>CygNusMaster-</strong></td><td><a href='https://github.com/FacePrintPay/CygNusMaster-' target='_blank'>https://github.com/FacePrintPay/CygNusMaster-</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>coral-server</strong></td><td><a href='https://github.com/FacePrintPay/coral-server' target='_blank'>https://github.com/FacePrintPay/coral-server</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>CodeAssist</strong></td><td><a href='https://github.com/FacePrintPay/CodeAssist' target='_blank'>https://github.com/FacePrintPay/CodeAssist</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>c25-agent-integrations</strong></td><td><a href='https://github.com/FacePrintPay/c25-agent-integrations' target='_blank'>https://github.com/FacePrintPay/c25-agent-integrations</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>c25-agent-deploy</strong></td><td><a href='https://github.com/FacePrintPay/c25-agent-deploy' target='_blank'>https://github.com/FacePrintPay/c25-agent-deploy</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>c25-agent-core</strong></td><td><a href='https://github.com/FacePrintPay/c25-agent-core' target='_blank'>https://github.com/FacePrintPay/c25-agent-core</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>bolt.new</strong></td><td><a href='https://github.com/FacePrintPay/bolt.new' target='_blank'>https://github.com/FacePrintPay/bolt.new</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>Apollo-11</strong></td><td><a href='https://github.com/FacePrintPay/Apollo-11' target='_blank'>https://github.com/FacePrintPay/Apollo-11</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>antora-ui-stargate</strong></td><td><a href='https://github.com/FacePrintPay/antora-ui-stargate' target='_blank'>https://github.com/FacePrintPay/antora-ui-stargate</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>AiKre8tive_Sovereign_Genesis</strong></td><td><a href='https://github.com/FacePrintPay/AiKre8tive_Sovereign_Genesis' target='_blank'>https://github.com/FacePrintPay/AiKre8tive_Sovereign_Genesis</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>ai-web-extensions</strong></td><td><a href='https://github.com/FacePrintPay/ai-web-extensions' target='_blank'>https://github.com/FacePrintPay/ai-web-extensions</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>Z-Series-Exhibits</strong></td><td><a href='https://github.com/FacePrintPay/Z-Series-Exhibits' target='_blank'>https://github.com/FacePrintPay/Z-Series-Exhibits</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>termux-ngrok</strong></td><td><a href='https://github.com/FacePrintPay/termux-ngrok' target='_blank'>https://github.com/FacePrintPay/termux-ngrok</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>TheKre8tive</strong></td><td><a href='https://github.com/FacePrintPay/TheKre8tive' target='_blank'>https://github.com/FacePrintPay/TheKre8tive</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>stargate-grpc-java-client</strong></td><td><a href='https://github.com/FacePrintPay/stargate-grpc-java-client' target='_blank'>https://github.com/FacePrintPay/stargate-grpc-java-client</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>stargate-dtest</strong></td><td><a href='https://github.com/FacePrintPay/stargate-dtest' target='_blank'>https://github.com/FacePrintPay/stargate-dtest</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>sentinel-lens</strong></td><td><a href='https://github.com/FacePrintPay/sentinel-lens' target='_blank'>https://github.com/FacePrintPay/sentinel-lens</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>SovereignGTP</strong></td><td><a href='https://github.com/FacePrintPay/SovereignGTP' target='_blank'>https://github.com/FacePrintPay/SovereignGTP</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>sovereign-ai-empire</strong></td><td><a href='https://github.com/FacePrintPay/sovereign-ai-empire' target='_blank'>https://github.com/FacePrintPay/sovereign-ai-empire</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>Push2Repo</strong></td><td><a href='https://github.com/FacePrintPay/Push2Repo' target='_blank'>https://github.com/FacePrintPay/Push2Repo</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>PlanetaryAgents</strong></td><td><a href='https://github.com/FacePrintPay/PlanetaryAgents' target='_blank'>https://github.com/FacePrintPay/PlanetaryAgents</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>NightSkyEngine</strong></td><td><a href='https://github.com/FacePrintPay/NightSkyEngine' target='_blank'>https://github.com/FacePrintPay/NightSkyEngine</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>PaTHos-Ai-</strong></td><td><a href='https://github.com/FacePrintPay/PaTHos-Ai-' target='_blank'>https://github.com/FacePrintPay/PaTHos-Ai-</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>OneBasher</strong></td><td><a href='https://github.com/FacePrintPay/OneBasher' target='_blank'>https://github.com/FacePrintPay/OneBasher</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>https-github.com-FacePrintPay-PoRTaLed-</strong></td><td><a href='https://github.com/FacePrintPay/https-github.com-FacePrintPay-PoRTaLed-' target='_blank'>https://github.com/FacePrintPay/https-github.com-FacePrintPay-PoRTaLed-</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>NoteTal</strong></td><td><a href='https://github.com/FacePrintPay/NoteTal' target='_blank'>https://github.com/FacePrintPay/NoteTal</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>NLP2Code</strong></td><td><a href='https://github.com/FacePrintPay/NLP2Code' target='_blank'>https://github.com/FacePrintPay/NLP2Code</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>json-formatter</strong></td><td><a href='https://github.com/FacePrintPay/json-formatter' target='_blank'>https://github.com/FacePrintPay/json-formatter</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>https-github.com-FacePrintPay-PoRTaLed-Nasa1</strong></td><td><a href='https://github.com/FacePrintPay/https-github.com-FacePrintPay-PoRTaLed-Nasa1' target='_blank'>https://github.com/FacePrintPay/https-github.com-FacePrintPay-PoRTaLed-Nasa1</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>LEGYC</strong></td><td><a href='https://github.com/FacePrintPay/LEGYC' target='_blank'>https://github.com/FacePrintPay/LEGYC</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>golf-course-project-mcp-server</strong></td><td><a href='https://github.com/FacePrintPay/golf-course-project-mcp-server' target='_blank'>https://github.com/FacePrintPay/golf-course-project-mcp-server</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>fp-build-fixer</strong></td><td><a href='https://github.com/FacePrintPay/fp-build-fixer' target='_blank'>https://github.com/FacePrintPay/fp-build-fixer</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>FacePrintPay-Consolidated</strong></td><td><a href='https://github.com/FacePrintPay/FacePrintPay-Consolidated' target='_blank'>https://github.com/FacePrintPay/FacePrintPay-Consolidated</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>django-dynamic-api</strong></td><td><a href='https://github.com/FacePrintPay/django-dynamic-api' target='_blank'>https://github.com/FacePrintPay/django-dynamic-api</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>FacePrintPay</strong></td><td><a href='https://github.com/FacePrintPay/FacePrintPay' target='_blank'>https://github.com/FacePrintPay/FacePrintPay</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>DeVa-DevOps</strong></td><td><a href='https://github.com/FacePrintPay/DeVa-DevOps' target='_blank'>https://github.com/FacePrintPay/DeVa-DevOps</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>claude-artifacts-downloader</strong></td><td><a href='https://github.com/FacePrintPay/claude-artifacts-downloader' target='_blank'>https://github.com/FacePrintPay/claude-artifacts-downloader</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>c25-agent-pipeline</strong></td><td><a href='https://github.com/FacePrintPay/c25-agent-pipeline' target='_blank'>https://github.com/FacePrintPay/c25-agent-pipeline</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>build-agentic-software-w-coral-os-agents</strong></td><td><a href='https://github.com/FacePrintPay/build-agentic-software-w-coral-os-agents' target='_blank'>https://github.com/FacePrintPay/build-agentic-software-w-coral-os-agents</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>c25-agent-dashboard</strong></td><td><a href='https://github.com/FacePrintPay/c25-agent-dashboard' target='_blank'>https://github.com/FacePrintPay/c25-agent-dashboard</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>c25-agent-automation</strong></td><td><a href='https://github.com/FacePrintPay/c25-agent-automation' target='_blank'>https://github.com/FacePrintPay/c25-agent-automation</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>c25-agent-api</strong></td><td><a href='https://github.com/FacePrintPay/c25-agent-api' target='_blank'>https://github.com/FacePrintPay/c25-agent-api</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>AiMetaverse-Orgin</strong></td><td><a href='https://github.com/FacePrintPay/AiMetaverse-Orgin' target='_blank'>https://github.com/FacePrintPay/AiMetaverse-Orgin</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>AiMetaverse</strong></td><td><a href='https://github.com/FacePrintPay/AiMetaverse' target='_blank'>https://github.com/FacePrintPay/AiMetaverse</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>AiMeta</strong></td><td><a href='https://github.com/FacePrintPay/AiMeta' target='_blank'>https://github.com/FacePrintPay/AiMeta</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>AiKre8tive-</strong></td><td><a href='https://github.com/FacePrintPay/AiKre8tive-' target='_blank'>https://github.com/FacePrintPay/AiKre8tive-</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>agentik</strong></td><td><a href='https://github.com/FacePrintPay/agentik' target='_blank'>https://github.com/FacePrintPay/agentik</a></td><td class='ts'>2026-02-25</td></tr>
-<tr><td><strong>sovereign-architect</strong></td><td><a href='https://github.com/FacePrintPay/sovereign-architect' target='_blank'>https://github.com/FacePrintPay/sovereign-architect</a></td><td class='ts'>2025-12-13</td></tr>
-<tr><td><strong>pkgs</strong></td><td><a href='https://github.com/FacePrintPay/pkgs' target='_blank'>https://github.com/FacePrintPay/pkgs</a></td><td class='ts'>2025-09-22</td></tr>
-<tr><td><strong>app-directory</strong></td><td><a href='https://github.com/FacePrintPay/app-directory' target='_blank'>https://github.com/FacePrintPay/app-directory</a></td><td class='ts'>2025-09-22</td></tr>
-<tr><td><strong>vite-react</strong></td><td><a href='https://github.com/FacePrintPay/vite-react' target='_blank'>https://github.com/FacePrintPay/vite-react</a></td><td class='ts'>2025-09-16</td></tr>
-<tr><td><strong>AiKre8tive.us</strong></td><td><a href='https://github.com/FacePrintPay/AiKre8tive.us' target='_blank'>https://github.com/FacePrintPay/AiKre8tive.us</a></td><td class='ts'>2025-09-01</td></tr>
-<tr><td><strong>nextjs-enterprise-boilerplate</strong></td><td><a href='https://github.com/FacePrintPay/nextjs-enterprise-boilerplate' target='_blank'>https://github.com/FacePrintPay/nextjs-enterprise-boilerplate</a></td><td class='ts'>2025-08-16</td></tr>
-<tr><td><strong>empathic-voice-interface-starter</strong></td><td><a href='https://github.com/FacePrintPay/empathic-voice-interface-starter' target='_blank'>https://github.com/FacePrintPay/empathic-voice-interface-starter</a></td><td class='ts'>2025-08-16</td></tr>
-<tr><td><strong>morphic-ai-answer-engine-generative-ui</strong></td><td><a href='https://github.com/FacePrintPay/morphic-ai-answer-engine-generative-ui' target='_blank'>https://github.com/FacePrintPay/morphic-ai-answer-engine-generative-ui</a></td><td class='ts'>2025-08-05</td></tr>
-<tr><td><strong>lib</strong></td><td><a href='https://github.com/FacePrintPay/lib' target='_blank'>https://github.com/FacePrintPay/lib</a></td><td class='ts'>2025-05-17</td></tr>
-  </table>
+<div id="scripts" class="tc">
+  <input class="search" type="text" placeholder="Search scripts..." onkeyup="filter('st',this.value)">
+  <table><thead><tr><th>Repository</th><th>Type</th><th>Source</th></tr></thead>
+  <tbody id="st"></tbody></table>
 </div>
 
-<div class="section">
-  <h2>🌌 GITHUB REPOS — Constillation25</h2>
-  <table>
-    <tr><th>Repository</th><th>URL</th></tr>
-<tr><td><strong>constellation25</strong></td><td><a href='https://github.com/Constillation25/constellation25' target='_blank'>https://github.com/Constillation25/constellation25</a></td></tr>
-<tr><td><strong>npm-documentation</strong></td><td><a href='https://github.com/Constillation25/npm-documentation' target='_blank'>https://github.com/Constillation25/npm-documentation</a></td></tr>
-<tr><td><strong>data-api</strong></td><td><a href='https://github.com/Constillation25/data-api' target='_blank'>https://github.com/Constillation25/data-api</a></td></tr>
-<tr><td><strong>vscode-project-manager</strong></td><td><a href='https://github.com/Constillation25/vscode-project-manager' target='_blank'>https://github.com/Constillation25/vscode-project-manager</a></td></tr>
-<tr><td><strong>vite-react</strong></td><td><a href='https://github.com/Constillation25/vite-react' target='_blank'>https://github.com/Constillation25/vite-react</a></td></tr>
-<tr><td><strong>termux-ngrok</strong></td><td><a href='https://github.com/Constillation25/termux-ngrok' target='_blank'>https://github.com/Constillation25/termux-ngrok</a></td></tr>
-<tr><td><strong>stargate-grpc-nosqlbench</strong></td><td><a href='https://github.com/Constillation25/stargate-grpc-nosqlbench' target='_blank'>https://github.com/Constillation25/stargate-grpc-nosqlbench</a></td></tr>
-<tr><td><strong>stargate-grpc-node-client</strong></td><td><a href='https://github.com/Constillation25/stargate-grpc-node-client' target='_blank'>https://github.com/Constillation25/stargate-grpc-node-client</a></td></tr>
-<tr><td><strong>stargate-grpc-java-client</strong></td><td><a href='https://github.com/Constillation25/stargate-grpc-java-client' target='_blank'>https://github.com/Constillation25/stargate-grpc-java-client</a></td></tr>
-<tr><td><strong>stargate-grpc-go-client</strong></td><td><a href='https://github.com/Constillation25/stargate-grpc-go-client' target='_blank'>https://github.com/Constillation25/stargate-grpc-go-client</a></td></tr>
-<tr><td><strong>stargate-dtest</strong></td><td><a href='https://github.com/Constillation25/stargate-dtest' target='_blank'>https://github.com/Constillation25/stargate-dtest</a></td></tr>
-<tr><td><strong>sovereign-ai-publish</strong></td><td><a href='https://github.com/Constillation25/sovereign-ai-publish' target='_blank'>https://github.com/Constillation25/sovereign-ai-publish</a></td></tr>
-<tr><td><strong>sovereign-ad-serve</strong></td><td><a href='https://github.com/Constillation25/sovereign-ad-serve' target='_blank'>https://github.com/Constillation25/sovereign-ad-serve</a></td></tr>
-<tr><td><strong>sentinel-lens</strong></td><td><a href='https://github.com/Constillation25/sentinel-lens' target='_blank'>https://github.com/Constillation25/sentinel-lens</a></td></tr>
-<tr><td><strong>bolt.new</strong></td><td><a href='https://github.com/Constillation25/bolt.new' target='_blank'>https://github.com/Constillation25/bolt.new</a></td></tr>
-<tr><td><strong>blackboxai-1741225183777</strong></td><td><a href='https://github.com/Constillation25/blackboxai-1741225183777' target='_blank'>https://github.com/Constillation25/blackboxai-1741225183777</a></td></tr>
-<tr><td><strong>WideOpen-Obsidian</strong></td><td><a href='https://github.com/Constillation25/WideOpen-Obsidian' target='_blank'>https://github.com/Constillation25/WideOpen-Obsidian</a></td></tr>
-<tr><td><strong>pkgs</strong></td><td><a href='https://github.com/Constillation25/pkgs' target='_blank'>https://github.com/Constillation25/pkgs</a></td></tr>
-<tr><td><strong>obsidian-vault</strong></td><td><a href='https://github.com/Constillation25/obsidian-vault' target='_blank'>https://github.com/Constillation25/obsidian-vault</a></td></tr>
-<tr><td><strong>nextjs-enterprise-boilerplate</strong></td><td><a href='https://github.com/Constillation25/nextjs-enterprise-boilerplate' target='_blank'>https://github.com/Constillation25/nextjs-enterprise-boilerplate</a></td></tr>
-<tr><td><strong>nextjs-boilerplate</strong></td><td><a href='https://github.com/Constillation25/nextjs-boilerplate' target='_blank'>https://github.com/Constillation25/nextjs-boilerplate</a></td></tr>
-<tr><td><strong>morphic-ai-answer-engine-generative-ui</strong></td><td><a href='https://github.com/Constillation25/morphic-ai-answer-engine-generative-ui' target='_blank'>https://github.com/Constillation25/morphic-ai-answer-engine-generative-ui</a></td></tr>
-<tr><td><strong>memoria-agent</strong></td><td><a href='https://github.com/Constillation25/memoria-agent' target='_blank'>https://github.com/Constillation25/memoria-agent</a></td></tr>
-<tr><td><strong>linker</strong></td><td><a href='https://github.com/Constillation25/linker' target='_blank'>https://github.com/Constillation25/linker</a></td></tr>
-<tr><td><strong>lib</strong></td><td><a href='https://github.com/Constillation25/lib' target='_blank'>https://github.com/Constillation25/lib</a></td></tr>
-<tr><td><strong>kreativekoncepts</strong></td><td><a href='https://github.com/Constillation25/kreativekoncepts' target='_blank'>https://github.com/Constillation25/kreativekoncepts</a></td></tr>
-<tr><td><strong>json-formatter</strong></td><td><a href='https://github.com/Constillation25/json-formatter' target='_blank'>https://github.com/Constillation25/json-formatter</a></td></tr>
-<tr><td><strong>https-github.com-FacePrintPay-PoRTaLed-Nasa1</strong></td><td><a href='https://github.com/Constillation25/https-github.com-FacePrintPay-PoRTaLed-Nasa1' target='_blank'>https://github.com/Constillation25/https-github.com-FacePrintPay-PoRTaLed-Nasa1</a></td></tr>
-<tr><td><strong>https-github.com-FacePrintPay-PoRTaLed-</strong></td><td><a href='https://github.com/Constillation25/https-github.com-FacePrintPay-PoRTaLed-' target='_blank'>https://github.com/Constillation25/https-github.com-FacePrintPay-PoRTaLed-</a></td></tr>
-<tr><td><strong>golf-course-project-mcp-server</strong></td><td><a href='https://github.com/Constillation25/golf-course-project-mcp-server' target='_blank'>https://github.com/Constillation25/golf-course-project-mcp-server</a></td></tr>
-<tr><td><strong>fp-build-fixer</strong></td><td><a href='https://github.com/Constillation25/fp-build-fixer' target='_blank'>https://github.com/Constillation25/fp-build-fixer</a></td></tr>
-<tr><td><strong>faceprintpay_monorepo</strong></td><td><a href='https://github.com/Constillation25/faceprintpay_monorepo' target='_blank'>https://github.com/Constillation25/faceprintpay_monorepo</a></td></tr>
-<tr><td><strong>empathic-voice-interface-starter</strong></td><td><a href='https://github.com/Constillation25/empathic-voice-interface-starter' target='_blank'>https://github.com/Constillation25/empathic-voice-interface-starter</a></td></tr>
-<tr><td><strong>dynamoDB-adapter</strong></td><td><a href='https://github.com/Constillation25/dynamoDB-adapter' target='_blank'>https://github.com/Constillation25/dynamoDB-adapter</a></td></tr>
-<tr><td><strong>django-dynamic-api</strong></td><td><a href='https://github.com/Constillation25/django-dynamic-api' target='_blank'>https://github.com/Constillation25/django-dynamic-api</a></td></tr>
-<tr><td><strong>coral-server</strong></td><td><a href='https://github.com/Constillation25/coral-server' target='_blank'>https://github.com/Constillation25/coral-server</a></td></tr>
-<tr><td><strong>constellation25-mono</strong></td><td><a href='https://github.com/Constillation25/constellation25-mono' target='_blank'>https://github.com/Constillation25/constellation25-mono</a></td></tr>
-<tr><td><strong>VideoCourts</strong></td><td><a href='https://github.com/Constillation25/VideoCourts' target='_blank'>https://github.com/Constillation25/VideoCourts</a></td></tr>
-<tr><td><strong>master</strong></td><td><a href='https://github.com/Constillation25/master' target='_blank'>https://github.com/Constillation25/master</a></td></tr>
-<tr><td><strong>aikre8tive</strong></td><td><a href='https://github.com/Constillation25/aikre8tive' target='_blank'>https://github.com/Constillation25/aikre8tive</a></td></tr>
-<tr><td><strong>VeRseD_Ai</strong></td><td><a href='https://github.com/Constillation25/VeRseD_Ai' target='_blank'>https://github.com/Constillation25/VeRseD_Ai</a></td></tr>
-<tr><td><strong>PaThosAi</strong></td><td><a href='https://github.com/Constillation25/PaThosAi' target='_blank'>https://github.com/Constillation25/PaThosAi</a></td></tr>
-<tr><td><strong>FacePrintPay-Consolidated</strong></td><td><a href='https://github.com/Constillation25/FacePrintPay-Consolidated' target='_blank'>https://github.com/Constillation25/FacePrintPay-Consolidated</a></td></tr>
-<tr><td><strong>CygNusMaster-</strong></td><td><a href='https://github.com/Constillation25/CygNusMaster-' target='_blank'>https://github.com/Constillation25/CygNusMaster-</a></td></tr>
-<tr><td><strong>AiKre8tive_Sovereign_Genesis</strong></td><td><a href='https://github.com/Constillation25/AiKre8tive_Sovereign_Genesis' target='_blank'>https://github.com/Constillation25/AiKre8tive_Sovereign_Genesis</a></td></tr>
-<tr><td><strong>codespaces-react</strong></td><td><a href='https://github.com/Constillation25/codespaces-react' target='_blank'>https://github.com/Constillation25/codespaces-react</a></td></tr>
-<tr><td><strong>claude-artifacts-downloader</strong></td><td><a href='https://github.com/Constillation25/claude-artifacts-downloader' target='_blank'>https://github.com/Constillation25/claude-artifacts-downloader</a></td></tr>
-<tr><td><strong>c25-agent-pipeline</strong></td><td><a href='https://github.com/Constillation25/c25-agent-pipeline' target='_blank'>https://github.com/Constillation25/c25-agent-pipeline</a></td></tr>
-<tr><td><strong>c25-agent-integrations</strong></td><td><a href='https://github.com/Constillation25/c25-agent-integrations' target='_blank'>https://github.com/Constillation25/c25-agent-integrations</a></td></tr>
-<tr><td><strong>c25-agent-deploy</strong></td><td><a href='https://github.com/Constillation25/c25-agent-deploy' target='_blank'>https://github.com/Constillation25/c25-agent-deploy</a></td></tr>
-<tr><td><strong>c25-agent-dashboard</strong></td><td><a href='https://github.com/Constillation25/c25-agent-dashboard' target='_blank'>https://github.com/Constillation25/c25-agent-dashboard</a></td></tr>
-<tr><td><strong>c25-agent-core</strong></td><td><a href='https://github.com/Constillation25/c25-agent-core' target='_blank'>https://github.com/Constillation25/c25-agent-core</a></td></tr>
-<tr><td><strong>c25-agent-automation</strong></td><td><a href='https://github.com/Constillation25/c25-agent-automation' target='_blank'>https://github.com/Constillation25/c25-agent-automation</a></td></tr>
-<tr><td><strong>c25-agent-api</strong></td><td><a href='https://github.com/Constillation25/c25-agent-api' target='_blank'>https://github.com/Constillation25/c25-agent-api</a></td></tr>
-<tr><td><strong>Agentik</strong></td><td><a href='https://github.com/Constillation25/Agentik' target='_blank'>https://github.com/Constillation25/Agentik</a></td></tr>
-<tr><td><strong>Orange</strong></td><td><a href='https://github.com/Constillation25/Orange' target='_blank'>https://github.com/Constillation25/Orange</a></td></tr>
-<tr><td><strong>build-agentic-software-w-coral-os-agents</strong></td><td><a href='https://github.com/Constillation25/build-agentic-software-w-coral-os-agents' target='_blank'>https://github.com/Constillation25/build-agentic-software-w-coral-os-agents</a></td></tr>
-<tr><td><strong>blackboxai-1742376990260</strong></td><td><a href='https://github.com/Constillation25/blackboxai-1742376990260' target='_blank'>https://github.com/Constillation25/blackboxai-1742376990260</a></td></tr>
-<tr><td><strong>blackboxai-1742374192849</strong></td><td><a href='https://github.com/Constillation25/blackboxai-1742374192849' target='_blank'>https://github.com/Constillation25/blackboxai-1742374192849</a></td></tr>
-<tr><td><strong>blackboxai-1742368461092</strong></td><td><a href='https://github.com/Constillation25/blackboxai-1742368461092' target='_blank'>https://github.com/Constillation25/blackboxai-1742368461092</a></td></tr>
-<tr><td><strong>blackboxai-1742367771175</strong></td><td><a href='https://github.com/Constillation25/blackboxai-1742367771175' target='_blank'>https://github.com/Constillation25/blackboxai-1742367771175</a></td></tr>
-<tr><td><strong>blackboxai-1742357245683</strong></td><td><a href='https://github.com/Constillation25/blackboxai-1742357245683' target='_blank'>https://github.com/Constillation25/blackboxai-1742357245683</a></td></tr>
-<tr><td><strong>blackboxai-1742356607403</strong></td><td><a href='https://github.com/Constillation25/blackboxai-1742356607403' target='_blank'>https://github.com/Constillation25/blackboxai-1742356607403</a></td></tr>
-<tr><td><strong>banani-prototype</strong></td><td><a href='https://github.com/Constillation25/banani-prototype' target='_blank'>https://github.com/Constillation25/banani-prototype</a></td></tr>
-<tr><td><strong>app-directory</strong></td><td><a href='https://github.com/Constillation25/app-directory' target='_blank'>https://github.com/Constillation25/app-directory</a></td></tr>
-<tr><td><strong>antora-ui-stargate</strong></td><td><a href='https://github.com/Constillation25/antora-ui-stargate' target='_blank'>https://github.com/Constillation25/antora-ui-stargate</a></td></tr>
-<tr><td><strong>agentik_ghpages_build</strong></td><td><a href='https://github.com/Constillation25/agentik_ghpages_build' target='_blank'>https://github.com/Constillation25/agentik_ghpages_build</a></td></tr>
-<tr><td><strong>Z-Series-Exhibits</strong></td><td><a href='https://github.com/Constillation25/Z-Series-Exhibits' target='_blank'>https://github.com/Constillation25/Z-Series-Exhibits</a></td></tr>
-<tr><td><strong>THAT</strong></td><td><a href='https://github.com/Constillation25/THAT' target='_blank'>https://github.com/Constillation25/THAT</a></td></tr>
-<tr><td><strong>SovereignGTP</strong></td><td><a href='https://github.com/Constillation25/SovereignGTP' target='_blank'>https://github.com/Constillation25/SovereignGTP</a></td></tr>
-<tr><td><strong>RepoDepot-Stargate</strong></td><td><a href='https://github.com/Constillation25/RepoDepot-Stargate' target='_blank'>https://github.com/Constillation25/RepoDepot-Stargate</a></td></tr>
-<tr><td><strong>Push2Repo</strong></td><td><a href='https://github.com/Constillation25/Push2Repo' target='_blank'>https://github.com/Constillation25/Push2Repo</a></td></tr>
-<tr><td><strong>PoRTaLed-</strong></td><td><a href='https://github.com/Constillation25/PoRTaLed-' target='_blank'>https://github.com/Constillation25/PoRTaLed-</a></td></tr>
-<tr><td><strong>PlanetaryAgents</strong></td><td><a href='https://github.com/Constillation25/PlanetaryAgents' target='_blank'>https://github.com/Constillation25/PlanetaryAgents</a></td></tr>
-<tr><td><strong>PaTHos-Ai-</strong></td><td><a href='https://github.com/Constillation25/PaTHos-Ai-' target='_blank'>https://github.com/Constillation25/PaTHos-Ai-</a></td></tr>
-<tr><td><strong>NoteTal</strong></td><td><a href='https://github.com/Constillation25/NoteTal' target='_blank'>https://github.com/Constillation25/NoteTal</a></td></tr>
-<tr><td><strong>NLP2Code</strong></td><td><a href='https://github.com/Constillation25/NLP2Code' target='_blank'>https://github.com/Constillation25/NLP2Code</a></td></tr>
-<tr><td><strong>MatrixOS</strong></td><td><a href='https://github.com/Constillation25/MatrixOS' target='_blank'>https://github.com/Constillation25/MatrixOS</a></td></tr>
-<tr><td><strong>LEGYC</strong></td><td><a href='https://github.com/Constillation25/LEGYC' target='_blank'>https://github.com/Constillation25/LEGYC</a></td></tr>
-<tr><td><strong>FacePrintPay</strong></td><td><a href='https://github.com/Constillation25/FacePrintPay' target='_blank'>https://github.com/Constillation25/FacePrintPay</a></td></tr>
-<tr><td><strong>DeVa-DevOps</strong></td><td><a href='https://github.com/Constillation25/DeVa-DevOps' target='_blank'>https://github.com/Constillation25/DeVa-DevOps</a></td></tr>
-<tr><td><strong>Apollo-11</strong></td><td><a href='https://github.com/Constillation25/Apollo-11' target='_blank'>https://github.com/Constillation25/Apollo-11</a></td></tr>
-<tr><td><strong>AiMetaverse-Orgin</strong></td><td><a href='https://github.com/Constillation25/AiMetaverse-Orgin' target='_blank'>https://github.com/Constillation25/AiMetaverse-Orgin</a></td></tr>
-<tr><td><strong>AiMeta</strong></td><td><a href='https://github.com/Constillation25/AiMeta' target='_blank'>https://github.com/Constillation25/AiMeta</a></td></tr>
-<tr><td><strong>AiKre8tive.us</strong></td><td><a href='https://github.com/Constillation25/AiKre8tive.us' target='_blank'>https://github.com/Constillation25/AiKre8tive.us</a></td></tr>
-<tr><td><strong>AiKre8tive-</strong></td><td><a href='https://github.com/Constillation25/AiKre8tive-' target='_blank'>https://github.com/Constillation25/AiKre8tive-</a></td></tr>
-  </table>
-</div>
+<footer>Constellation 25 · FacePrintPay · Cygel White · 2026</footer>
 
-<div class="section">
-  <h2>⚡ VERIFIED SCRIPTS (552)</h2>
-  <table>
-    <tr><th>Script</th><th>Status</th><th>Path</th></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/.termux/boot/sovereign-auto-start.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/constellation-25/constellation.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/constellation-25/run.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/setup-shizuku.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-unified-launch.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereigngtp.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/FacePrintPay/artifacts/agents/backfill_artifacts_from_done.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/FacePrintPay/artifacts/agents/yesquid_task_worker.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/FacePrintPay/artifacts/run_all_tasks.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/FacePrintPay/DEPLOY_UNIVERSE.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/FacePrintPay/FacePrintPay/artifacts/agents/backfill_artifacts_from_done.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/FacePrintPay/FacePrintPay/artifacts/agents/yesquid_task_worker.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/FacePrintPay/FacePrintPay/artifacts/run_all_tasks.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/FacePrintPay/FacePrintPay/DEPLOY_UNIVERSE.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/archives/agentik/agentik/install.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/build_broccoli.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/Ultimate-Termux-Linux-Installer/install.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/Ultimate-Termux-Linux-Installer/Ultimate-Termux-Linux-Installer/install.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sync_obsidian_cloud.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/Agentik/install.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/agents/ping_agents.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/arcai_deploy.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/broadcast_whisper_echo.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/buzzblast.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/deploy_agents.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/final_sync.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/git_autocommit.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/inject_versedna.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/launch_presskit.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/platform/deploy_linked2.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/platform/deploy_log_dialog.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/platform/planetary-deployment/deploy-agents.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/platform/rebuild_percellify.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/platform/scripts/generate_qr_affiliate.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/platform/scripts/install_qrencode.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/platform/setup_pingpang_demo.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/platform/setup_vscode.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/platform/tailwind_view.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/reactivate_planetary_agents.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/scripts/whisper_holiday_bash.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/send_echo_trace.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/sovereign_push_everywhere.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/src/AiKre8tive-Stargate/whisper_auto_loop.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign-gtp/dashboard.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/parasol-termux.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/backup_20260122_2326/sovereign/launch.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/backup_20260122_2326/sovereign/launch_tunnel.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/backup_20260122_2326/sovereign/deploy_sovereign.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/launch.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/bio_push.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/package-portfolio.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/VeRseD_Ai/key_rotate.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/repos/WideOpen-Obsidian/Termux_Backup_20251227_231515/scripts/data/data/com.termux/files/home/AiKre8tive_ONE/monorepo/tools/integrity_run.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/repos/WideOpen-Obsidian/Termux_Backup_20251227_231515/scripts/data/data/com.termux/files/home/PlanetaryAgents/bin/start_stack.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/repos/WideOpen-Obsidian/Termux_Backup_20251227_231515/scripts/data/data/com.termux/files/home/monorepo/tasks/mars_sharecrop.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/repos/WideOpen-Obsidian/Termux_Backup_20251227_231515/scripts/data/data/com.termux/files/home/termux-scripts/setup-multi-repo.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/repos/WideOpen-Obsidian/Termux_Backup_20251227_231515/scripts/data/data/com.termux/files/home/termux-scripts/setup-single-repo.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/repos/WideOpen-Obsidian/Termux_Backup_20251227_231515/scripts/data/data/com.termux/files/home/setup-termux-obsidian-sync.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/repos/WideOpen-Obsidian/Termux_Backup_20251227_231515/scripts/data/data/com.termux/files/home/sovereign_deployer.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/repos/WideOpen-Obsidian/Termux_Backup_20251227_231515/scripts/data/data/com.termux/files/home/setup.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/repos/WideOpen-Obsidian/Termux_Backup_20251227_231515/scripts/data/data/com.termux/files/home/consolidate_obsidian.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/repos/WideOpen-Obsidian/Termux_Backup_20251227_231515/scripts/data/data/com.termux/files/home/sync_to_obsidian.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/repos/WideOpen-Obsidian/Termux_Backup_20251227_231515/scripts/data/data/com.termux/files/home/run_all_home.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/repos/WideOpen-Obsidian/Termux_Backup_20251227_231515/scripts/data/data/com.termux/files/home/create_home_symlinks.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/repos/WideOpen-Obsidian/Termux_Backup_20251227_231515/scripts/data/data/com.termux/files/home/find_and_run_everything.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/repos/WideOpen-Obsidian/Termux_Backup_20251227_231515/scripts/data/data/com.termux/files/home/run_monorepo.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/repos/WideOpen-Obsidian/Termux_Backup_20251227_231515/scripts/data/data/com.termux/files/home/SOVEREIGN_SYSTEM/core/run.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/repos/WideOpen-Obsidian/Termux_Backup_20251227_231515/scripts/data/data/com.termux/files/home/STACK/run_stack.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/quick-deploy.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/github/FacePrintPay/agentik/install.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/github/setup-ssh.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/constellation25/c25-agent-deploy/arcai_deploy.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/constellation25/c25-agent-deploy/arcai_original.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/totalrecall_audit.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sqlmap/extra/shutils/pypi.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sqlmap/extra/shutils/recloak.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/archive-agentik.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/c25_ranger.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/scripts/whisper_holiday_bash.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/Agentik/install.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/Agentik/Agentik-Scout/run.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/sovereign_engine/bioauth.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zerocopy-0.8.39/ci/check_todo.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzma-sys-0.1.20/xz-5.2/macosx/build.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzma-sys-0.1.20/xz-5.2/windows/build.bash</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/encode_unicode-1.0.0/do.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/RepoDepot-Stargate/kre8tive_portfolio_build.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/kre8tive-empire/repos/agentik/install.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/kre8tive-empire/vercel-master/projects/cleanbuildfresh/deploy.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/kre8tive-empire/vercel-master/projects/ai-creative-stargate/deploy.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/kre8tive-empire/vercel-master/projects/z_series_project/deploy.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/kre8tive-empire/vercel-master/projects/jupiter-agent/deploy.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/kre8tive-empire/vercel-master/projects/flutter/deploy.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/kre8tive-empire/vercel-master/projects/app/deploy.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/kre8tive-empire/vercel-master/projects/frontend/deploy.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/kre8tive-empire/vercel-master/projects/ai-metaverse-orgin/deploy.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/kre8tive-empire/vercel-master/projects/linkto/deploy.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/kre8tive-empire/vercel-master/projects/aikre8tivegenesis/deploy.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/kre8tive-empire/vercel-master/projects/total_recall_forensics/deploy.sh</span></td></tr>
-<tr><td>COMPLETE:</td><td><span class='badge green'>✅ Verified</span></td><td><span style='color:#555'>COMPLETE: /data/data/com.termux/files/home/kre8tive-empire/vercel-master/projects/agi-kre8tive-beta/deploy.sh</span></td></tr>
-  </table>
-</div>
-
-<div class="section">
-  <h2>📋 KEY PROJECTS</h2>
-  <table>
-    <tr><th>Project</th><th>Status</th><th>Live URL</th></tr>
-    <tr><td><strong>RepoDepot-Stargate</strong></td><td><span class='badge green'>✅ Live</span></td><td><a href='https://faceprintpay.github.io/RepoDepot-Stargate' target='_blank'>View Live</a></td></tr>
-    <tr><td><strong>VideoCourts™</strong></td><td><span class='badge green'>✅ Live</span></td><td><a href='https://faceprintpay.github.io/videocourts' target='_blank'>View Live</a></td></tr>
-    <tr><td><strong>Constellation 25</strong></td><td><span class='badge green'>✅ Live</span></td><td><a href='https://constillation25.github.io/constellation25' target='_blank'>View Live</a></td></tr>
-    <tr><td><strong>NLP2CODE Router</strong></td><td><span class='badge yellow'>🔄 Active</span></td><td>Termux Local</td></tr>
-    <tr><td><strong>17 Agent Network</strong></td><td><span class='badge yellow'>🔄 Active</span></td><td>Termux Local</td></tr>
-  </table>
-</div>
-
-<div class='section'>
-<h2>⚡ RECENT GITHUB RUNS (Last 20)</h2>
-<table>
-<tr><th>Run Name</th><th>Status</th><th>SHA256</th><th>Date</th></tr>
-<tr><td colspan=4>Error fetching runs: Expecting value: line 1 column 1 (char 0)</td></tr>
-</table>
-</div>
-<div style="text-align:center;margin-top:30px;color:#555;font-size:.78em">
-  🌌 Constellation 25 · MrGGTP · FacePrintPay · Cygel White · 2026<br>
-  Built on Android · Termux · 3 Years · #FactsAreFacts
-</div>
+<script>
+function show(id,el){document.querySelectorAll('.tc').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.getElementById(id).classList.add('active');el.classList.add('active');}
+function filter(id,q){document.querySelectorAll('#'+id+' tr').forEach(r=>{r.style.display=r.textContent.toLowerCase().includes(q.toLowerCase())?'':'none';});}
+</script>
 </body>
 </html>
